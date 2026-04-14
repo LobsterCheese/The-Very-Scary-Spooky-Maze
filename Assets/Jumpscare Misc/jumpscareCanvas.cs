@@ -1,0 +1,56 @@
+using System.Collections;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class jumpscareCanvas : MonoBehaviour
+{
+    //how long the jumpscare plays
+    [SerializeField]
+    private float duration = 1f;
+    private Canvas jumpCanvas;
+
+    public jumpscareTemplate[] jumpscareInfo;
+    public int scaredBy;
+    /*
+     * 0 is spook
+     * 1 is skelly
+     * 2 is happy henry
+     * default to spook if somehow it doesnt trigger
+     */
+
+    public GameObject deathPrefab;
+
+    private GameObject self;
+
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        jumpCanvas = GetComponent<Canvas>();
+        self = this.gameObject;
+    }
+
+    private void OnEnable()
+    {
+        //loads corresponding info into the death screen
+        deathPrefab.GetComponent<deathScreenManager>().monster = jumpscareInfo[scaredBy];
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (jumpCanvas.isActiveAndEnabled)
+        {
+            StartCoroutine(deathScreen());
+        }
+    }
+
+    IEnumerator deathScreen()
+    {
+        if (!deathPrefab.activeInHierarchy)
+        {
+            deathPrefab.SetActive(true);
+            yield return new WaitForSeconds(duration);
+        }
+    }
+
+}
