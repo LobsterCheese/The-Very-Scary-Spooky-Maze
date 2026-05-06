@@ -79,7 +79,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 20
   m_Sprite: {fileID: 2014076536726479596, guid: b39b74df5863f244c9a86f1d20f3ec0a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -167,10 +167,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentSpeed: 0
+  textbox: {fileID: 0}
   mobSpeed: 2
   mobSlowedSpeed: 0.75
   HP: 3
-  jumpScare: {fileID: 7989105338443345438, guid: 7dd2da1028162b7489dbf8603f0f428d, type: 3}
   useHP: 1
   skeleton: 0
 --- !u!95 &3755977739301446356

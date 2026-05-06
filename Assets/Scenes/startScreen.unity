@@ -302,7 +302,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad794d95cbafd32458906b0d1612663b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roomName: Maze1
+  roomName: The Maze
 --- !u!4 &546434859
 Transform:
   m_ObjectHideFlags: 0
@@ -1011,8 +1011,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSpeed: 1
+  dontMove: 1
   flashlightStr: 1
   flashlightSize: {x: 3, y: 6, z: 1}
+  onAndOff: 0
+  markerAmount: 3
   checkpoint: 0
 --- !u!1 &1674072742
 GameObject:

@@ -8,6 +8,11 @@ public class jumpscareTemplate : ScriptableObject
     public string monsterName;
     public string description;
 
+    public AudioClip jumpscareSFX;
+
+    //for jumpscare animations;
+    public RuntimeAnimatorController animController;
+
     //image for monster
     public Sprite monsterImg;
 }

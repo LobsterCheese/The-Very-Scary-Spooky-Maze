@@ -30,7 +30,10 @@ public class skeletonBehavior : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        sprender.sprite = skellyStills[randPose];
+        if (!freeze)
+        {
+            sprender.sprite = skellyStills[randPose];
+        }
     }
 
     private void OnTriggerStay2D(Collider2D collision)

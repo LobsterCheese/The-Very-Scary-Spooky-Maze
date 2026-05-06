@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3393948549542341299}
   - component: {fileID: 6231233888334701805}
   - component: {fileID: 1745780324642691506}
+  - component: {fileID: 387644482504163577}
   m_Layer: 5
   m_Name: jumpscareIMG
   m_TagString: Untagged
@@ -34,8 +35,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1014.7, y: 571}
+  m_AnchoredPosition: {x: 1.2495, y: 0.6198}
+  m_SizeDelta: {x: 1084.4545, y: 616.1148}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6231233888334701805
 CanvasRenderer:
@@ -65,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 194383605510365315, guid: 292e6a38ae6344b4fa9ef0f24645be57, type: 3}
+  m_Sprite: {fileID: -3307366158611437739, guid: 973c24da04d5f3044ada6b77505f0ac8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -75,6 +76,28 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!95 &387644482504163577
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3663300693987084775}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fd3763e4eb344c34b8723d0505f7a56c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &9054961266318385931
 GameObject:
   m_ObjectHideFlags: 0
@@ -198,6 +221,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6f08924dd3c5b2747b8c3f556462936a, type: 2}
   scaredBy: 0
   deathPrefab: {fileID: 0}
+  display: {fileID: 3663300693987084775}
 --- !u!82 &6552684769803160238
 AudioSource:
   m_ObjectHideFlags: 0

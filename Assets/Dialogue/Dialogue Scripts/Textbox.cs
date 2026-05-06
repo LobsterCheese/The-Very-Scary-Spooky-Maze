@@ -26,7 +26,8 @@ public class Textbox : MonoBehaviour
     private void OnEnable()
     {
         index = 0;
-        typing = true;
+        typing = false;
+        nextSentence();
     }
 
     void nextSentence()

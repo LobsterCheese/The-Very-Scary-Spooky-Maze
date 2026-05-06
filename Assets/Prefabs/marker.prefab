@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 256860356300196374}
-  - component: {fileID: 4376483637384028846}
+  - component: {fileID: 8406406634344212226}
   m_Layer: 0
   m_Name: flashlight
   m_TagString: Flashlight
@@ -32,8 +32,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 8934434402485180124}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!70 &4376483637384028846
-CapsuleCollider2D:
+--- !u!58 &8406406634344212226
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -66,9 +66,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.77187014, y: 0.3793254}
-  m_Size: {x: 7.138569, y: 7.445216}
-  m_Direction: 0
+  m_Offset: {x: -0.70785177, y: 0.3485031}
+  m_Radius: 2.173738
 --- !u!1 &5421346460620282338
 GameObject:
   m_ObjectHideFlags: 0
@@ -80,6 +79,7 @@ GameObject:
   - component: {fileID: 8934434402485180124}
   - component: {fileID: 3878483208917001340}
   - component: {fileID: 7983284054961460763}
+  - component: {fileID: 2098277561353169310}
   m_Layer: 0
   m_Name: marker
   m_TagString: Marker
@@ -97,7 +97,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.8694, y: -0.83, z: 0}
-  m_LocalScale: {x: 0.47025827, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 863752415577640057}
@@ -148,7 +148,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 70
-  m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
+  m_Sprite: {fileID: 1835320846467938727, guid: 2417bf7a7f2d3904388c9393bff8e4d9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -196,6 +196,28 @@ CapsuleCollider2D:
   m_Offset: {x: 0.02028639, y: 0.03815925}
   m_Size: {x: 2.3591826, y: 2.4960697}
   m_Direction: 0
+--- !u!95 &2098277561353169310
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5421346460620282338}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 79a1193d72e23df4ea7e69c744cad41a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &9105115277713750395
 GameObject:
   m_ObjectHideFlags: 0
@@ -269,7 +291,7 @@ MonoBehaviour:
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
-  m_PointLightOuterRadius: 4
+  m_PointLightOuterRadius: 5
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1

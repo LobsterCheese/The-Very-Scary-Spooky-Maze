@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/startScreen.unity
     guid: edca3cdf2aea4c748a22fb03e6e23720
   - enabled: 1
-    path: Assets/Scenes/Maze1.unity
+    path: Assets/Scenes/The Maze.unity
     guid: 28a90b7463c66f946a85f495e64c2cce
   - enabled: 1
     path: Assets/Scenes/winScene.unity

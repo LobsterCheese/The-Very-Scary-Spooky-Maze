@@ -2,16 +2,12 @@ using UnityEngine;
 
 public class upgradeConsumable : MonoBehaviour
 {
-
-    //set variable in accordance to which stat this item upgrades
-    public bool speed;
-    public bool str;
-    public bool size;
-
-    private bool upgraded;
-
     //fill in how much you want stats to increase
-    public float upgradeAmount;
+    [SerializeField]
+    private int upgradeAmount;
+
+    [SerializeField]
+    private bool onAndOff;
 
     private void Awake()
     {
@@ -27,19 +23,11 @@ public class upgradeConsumable : MonoBehaviour
         //if player picks up consumable, upgrade corresponding stat and then destroy self
         if (collision.gameObject.CompareTag("Guy"))
         {
-            if (speed)
+            playerUpgrades.instance.markerAmount += upgradeAmount;
+            if (onAndOff)
             {
-                playerUpgrades.instance.playerSpeed += upgradeAmount;
+                playerUpgrades.instance.onAndOff = true;
             }
-            if (str)
-            {
-                playerUpgrades.instance.flashlightStr += upgradeAmount;
-            }
-            if (size)
-            {
-                playerUpgrades.instance.flashlightSize += new Vector3(upgradeAmount, upgradeAmount, 0);
-            }
-
             Destroy(gameObject);
         }
     }

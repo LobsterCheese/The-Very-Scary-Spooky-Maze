@@ -2,6 +2,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro;
 
 public class playerBehavior : MonoBehaviour
 {
@@ -15,14 +16,17 @@ public class playerBehavior : MonoBehaviour
     public GameObject jumpscareCanvas;
     public GameObject jumpscareCanvasIMG;
     public GameObject markerPrefab;
-    public RuntimeAnimatorController idle;
+    public RuntimeAnimatorController idle; //these should be refactored later
     public RuntimeAnimatorController walking;
     public GameObject dialogueBox;
     public Camera cam;
     public GameObject checkpoint1;
+    public GameObject PlayerUI;
+    public TextMeshProUGUI playerMarkersText;
+    public TextMeshProUGUI maxMarkersText;
 
     private Animator anim;
-    private Rigidbody2D rb;
+    //private Rigidbody2D rb;
     private bool canPlaceMarker;
     private bool canPlaceMarkerSafe;
     private GameObject closestMarker;
@@ -38,13 +42,16 @@ public class playerBehavior : MonoBehaviour
         {
             transform.position = checkpoint1.transform.position;
         }
+
+        marker = playerUpgrades.instance.markerAmount;
+
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         anim = GetComponent<Animator>();
-        rb = GetComponent<Rigidbody2D>();
+        //rb = GetComponent<Rigidbody2D>();
 
         camSize = cam.orthographicSize;
 
@@ -54,10 +61,14 @@ public class playerBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        playerMarkersText.text = marker.ToString();
+        maxMarkersText.text = maxMarkers.ToString();
+
         maxMarkers = playerUpgrades.instance.markerAmount;
 
         //for testing and debugging purposes
         //resets scene in case you get stuck or want to retry
+        /*
         if (Input.GetKeyDown(KeyCode.R))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
@@ -68,62 +79,94 @@ public class playerBehavior : MonoBehaviour
 
             SceneManager.LoadScene("startScreen");
         }
+        */
+
+        var mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        
+        //flips player to face the camera
+        if(mousePos.x < transform.localScale.x)
+        {
+            transform.localScale = new Vector3(-1, 1, 1);
+        }
+        else
+        {
+            transform.localScale = new Vector3(1, 1, 1);
+        }
 
         //player control only works while textbox is not active in scene or not being jumpscared
-        if (!dialogueBox.activeInHierarchy || !jumpscareCanvas.activeInHierarchy)
+        if (dialogueBox.activeInHierarchy || jumpscareCanvas.activeInHierarchy)
         {
-            //animation controller
+            playerUpgrades.instance.dontMove = 0f;
+        }
+        else
+        {
+            playerUpgrades.instance.dontMove = 1f;
+        }
+
+        //forces player to idle if textbox is active in scene
+        if (dialogueBox.activeInHierarchy)
+        {
+            anim.runtimeAnimatorController = idle;
+        }
+
+        //animation controller
+        if (playerUpgrades.instance.dontMove != 0f)
+        {
             if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D))
             {
-                anim.runtimeAnimatorController = walking;    
+                anim.runtimeAnimatorController = walking;
             }
             else if (!Input.anyKey)
             {
                 anim.runtimeAnimatorController = idle;
             }
+        }
 
-            //places a marker to keep track of where you have been
-            if (Input.GetKeyDown(KeyCode.Space) && canPlaceMarker && marker > 0 && !canPlaceMarkerSafe)
-            {
-                marker--;
-                Instantiate(markerPrefab, transform.position, Quaternion.identity);
-            }
-            //if there is already a marker here, return it to the player
-            else if (Input.GetKeyDown(KeyCode.Space) && !canPlaceMarker && !canPlaceMarkerSafe)
-            {
-                marker++;
-                Destroy(closestMarker);
-            }
+        //places a marker to keep track of where you have been
+        if (Input.GetKeyDown(KeyCode.Space) && canPlaceMarker && marker > 0 && !canPlaceMarkerSafe)
+        {
+            marker--;
+            Instantiate(markerPrefab, transform.position, Quaternion.identity);
+        }
+        //if there is already a marker here, return it to the player
+        else if (Input.GetKeyDown(KeyCode.Space) && !canPlaceMarker && !canPlaceMarkerSafe)
+        {
+            marker++;
+            Destroy(closestMarker);
+        }
 
-            playerMovement = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+        playerMovement = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
 
-            //if you are within a safe zone, camera expands outwards and shrinks respectively
-            if (canPlaceMarkerSafe)
-            {
-                lerpSpeed += Time.deltaTime;
-                lerpSpeed = (lerpSpeed > 1f) ? 1f: lerpSpeed;
-                cam.orthographicSize = Mathf.Lerp(camSize, camSize * 2, lerpSpeed);
-            }
-            else if (!canPlaceMarkerSafe)
-            {
-                lerpSpeed -= Time.deltaTime;
-                lerpSpeed = (lerpSpeed < 0f) ? 0f : lerpSpeed;
-                cam.orthographicSize = Mathf.Lerp(camSize, cam.orthographicSize, lerpSpeed);
-            }
+        //if you are within a safe zone, camera expands outwards and shrinks respectively
+        if (canPlaceMarkerSafe)
+        {
+            lerpSpeed += Time.deltaTime;
+            lerpSpeed = (lerpSpeed > 1f) ? 1f: lerpSpeed;
+            cam.orthographicSize = Mathf.Lerp(camSize, camSize * 2, lerpSpeed);
+        }
+        else if (!canPlaceMarkerSafe)
+        {
+            lerpSpeed -= Time.deltaTime;
+            lerpSpeed = (lerpSpeed < 0f) ? 0f : lerpSpeed;
+            cam.orthographicSize = Mathf.Lerp(camSize, cam.orthographicSize, lerpSpeed);
         }
     }
 
     void movePlayer(Vector2 direction)
     {
-        if (!dialogueBox.activeInHierarchy || !jumpscareCanvas.activeInHierarchy) 
-        { 
-            transform.Translate(direction * playerSpeed * Time.deltaTime * playerUpgrades.instance.playerSpeed);
-        }
+        //if (!dialogueBox.activeInHierarchy || !jumpscareCanvas.activeInHierarchy) 
+        //{ 
+            transform.Translate(direction * playerSpeed * Time.deltaTime * playerUpgrades.instance.playerSpeed * playerUpgrades.instance.dontMove);
+        //}
     }
 
     void FixedUpdate()
     {
-        movePlayer(playerMovement);
+        //if (!dialogueBox.activeInHierarchy || !jumpscareCanvas.activeInHierarchy)
+        {
+
+            movePlayer(playerMovement);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -133,7 +176,18 @@ public class playerBehavior : MonoBehaviour
         {
             if(!jumpscareCanvas.activeInHierarchy)
             {
+                PlayerUI.SetActive(false);
                 jumpscareCanvas.GetComponent<jumpscareCanvas>().scaredBy = 0;
+                jumpscareNT(collision);
+            }
+        }
+
+        if (collision.gameObject.CompareTag("Happy"))
+        {
+            if (!jumpscareCanvas.activeInHierarchy)
+            {
+                PlayerUI.SetActive(false);
+                jumpscareCanvas.GetComponent<jumpscareCanvas>().scaredBy = 2;
                 jumpscareNT(collision);
             }
         }
@@ -187,15 +241,13 @@ public class playerBehavior : MonoBehaviour
         }
     }
 
-
-
-
+    //this section is dedicated to the methods that summon the proper UI for when jumpscares are activated
     //sets a jumpscare if the colliding mob does not have a trigger (skelly)
     private void jumpscareTrigger(Collision2D collision)
     {
         if (!jumpscareCanvas.activeInHierarchy)
         {
-            jumpscareCanvasIMG.GetComponent<Image>().sprite = collision.gameObject.GetComponent<spookBehavior>().jumpScare;
+            PlayerUI.SetActive(false);
             jumpscareCanvas.SetActive(true);
         }
     }
@@ -205,9 +257,8 @@ public class playerBehavior : MonoBehaviour
     {
         if (!jumpscareCanvas.activeInHierarchy)
         {
-            jumpscareCanvasIMG.GetComponent<Image>().sprite = collision.gameObject.GetComponent<spookBehavior>().jumpScare;
+            PlayerUI.SetActive(false);
             jumpscareCanvas.SetActive(true);
         }
     }
-
 }

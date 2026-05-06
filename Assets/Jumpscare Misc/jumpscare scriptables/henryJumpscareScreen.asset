@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce176b9513b668d4896d78be694e39fd, type: 3}
+  m_Name: henryJumpscareScreen
+  m_EditorClassIdentifier: 
+  monsterName: '"HAPPY HENRY"'
+  description: A great hugger. Try not to keep your flashlight on him for too long!
+  jumpscareSFX: {fileID: 0}
+  animController: {fileID: 9100000, guid: fd3763e4eb344c34b8723d0505f7a56c, type: 2}
+  monsterImg: {fileID: 9185539338980561261, guid: 8b40313687fc90c42abd76564aaf5e61, type: 3}

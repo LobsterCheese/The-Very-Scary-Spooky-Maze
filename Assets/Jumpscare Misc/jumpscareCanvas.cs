@@ -6,7 +6,7 @@ public class jumpscareCanvas : MonoBehaviour
 {
     //how long the jumpscare plays
     [SerializeField]
-    private float duration = 1f;
+    private float duration = 2f;
     private Canvas jumpCanvas;
 
     public jumpscareTemplate[] jumpscareInfo;
@@ -19,26 +19,27 @@ public class jumpscareCanvas : MonoBehaviour
      */
 
     public GameObject deathPrefab;
-
-    private GameObject self;
+    public GameObject display;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         jumpCanvas = GetComponent<Canvas>();
-        self = this.gameObject;
     }
 
     private void OnEnable()
     {
         //loads corresponding info into the death screen
         deathPrefab.GetComponent<deathScreenManager>().monster = jumpscareInfo[scaredBy];
+        display.GetComponent<Animator>().runtimeAnimatorController = jumpscareInfo[scaredBy].animController;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (jumpCanvas.isActiveAndEnabled)
+        duration -= Time.deltaTime;
+
+        if (jumpCanvas.isActiveAndEnabled && duration < 0)
         {
             StartCoroutine(deathScreen());
         }

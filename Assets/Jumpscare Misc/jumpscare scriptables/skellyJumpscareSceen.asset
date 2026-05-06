@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce176b9513b668d4896d78be694e39fd, type: 3}
+  m_Name: skellyJumpscareSceen
+  m_EditorClassIdentifier: 
+  monsterName: '"SKELLY"'
+  description: Creepy fellows who enjoy a good scare. Use your flashlight to stop
+    them in their tracks. Be warned, they like to travel in groups.
+  jumpscareSFX: {fileID: 0}
+  animController: {fileID: 9100000, guid: 8ecac6231a4732041a3f9785db46b7e2, type: 2}
+  monsterImg: {fileID: -3206937854239196484, guid: 61668f7c47866ca47bc6c508b8da7f6a, type: 3}
