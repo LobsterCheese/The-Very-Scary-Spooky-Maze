@@ -15,6 +15,7 @@ public class jumpscareCanvas : MonoBehaviour
      * 0 is spook
      * 1 is skelly
      * 2 is happy henry
+     * 3 is jolly jerry
      * default to spook if somehow it doesnt trigger
      */
 

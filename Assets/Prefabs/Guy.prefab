@@ -143,6 +143,7 @@ MonoBehaviour:
   PlayerUI: {fileID: 0}
   playerMarkersText: {fileID: 0}
   maxMarkersText: {fileID: 0}
+  stepDistance: 1.1
 --- !u!95 &-1289754764918065341
 Animator:
   serializedVersion: 7
@@ -214,4 +215,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b2987c96dd064546a71a700f707ec33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: 1
+  moving: 0
+  flashlight: 0

@@ -1,16 +1,16 @@
 fileFormatVersion: 2
-guid: 7b1afd45ae03e854eb70be16a04bdb07
+guid: fe412ccfbd6739b40ba994dc785e7d60
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 9217639406965272128
-    second: guy_flashlight_0
+      213: -7526510063178243185
+    second: guy_flashlight_revamped_0
   - first:
-      213: -3457960851397076760
-    second: guy_flashlight_1
+      213: -8999145940210878751
+    second: guy_flashlight_revamped_1
   - first:
-      213: 1777259282756274382
-    second: guy_flashlight_2
+      213: -5371973995771291676
+    second: guy_flashlight_revamped_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -106,13 +106,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: guy_flashlight_0
+      name: guy_flashlight_revamped_0
       rect:
         serializedVersion: 2
-        x: 92
-        y: 102
-        width: 116
-        height: 98
+        x: 76
+        y: 103
+        width: 147
+        height: 94
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -121,19 +121,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 04eaec71432abef70800000000000000
-      internalID: 9217639406965272128
+      spriteID: f83abd589f67c8790800000000000000
+      internalID: -7526510063178243185
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: guy_flashlight_1
+      name: guy_flashlight_revamped_1
       rect:
         serializedVersion: 2
-        x: 394
-        y: 105
-        width: 112
+        x: 377
+        y: 104
+        width: 146
         height: 93
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -143,19 +143,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8e8154d3dead200d0800000000000000
-      internalID: -3457960851397076760
+      spriteID: 1e6f4d7627c9c1380800000000000000
+      internalID: -8999145940210878751
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: guy_flashlight_2
+      name: guy_flashlight_revamped_2
       rect:
         serializedVersion: 2
-        x: 694
-        y: 103
-        width: 112
+        x: 678
+        y: 101
+        width: 145
         height: 97
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -165,8 +165,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ec8047eb6e71aa810800000000000000
-      internalID: 1777259282756274382
+      spriteID: 4e79a6fdc1ae275b0800000000000000
+      internalID: -5371973995771291676
       vertices: []
       indices: 
       edges: []
@@ -185,9 +185,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      guy_flashlight_0: 9217639406965272128
-      guy_flashlight_1: -3457960851397076760
-      guy_flashlight_2: 1777259282756274382
+      guy_flashlight_revamped_0: -7526510063178243185
+      guy_flashlight_revamped_1: -8999145940210878751
+      guy_flashlight_revamped_2: -5371973995771291676
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

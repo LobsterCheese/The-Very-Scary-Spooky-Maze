@@ -25,11 +25,20 @@ public class playerBehavior : MonoBehaviour
     public TextMeshProUGUI playerMarkersText;
     public TextMeshProUGUI maxMarkersText;
 
+    private SpriteRenderer sprender;
+
     private Animator anim;
     //private Rigidbody2D rb;
     private bool canPlaceMarker;
     private bool canPlaceMarkerSafe;
     private GameObject closestMarker;
+
+    //for managing step sounds
+    [SerializeField]
+    private float stepDistance;
+    private Vector3 lastLocation;
+
+    private Vector2 mousePos;
 
     private float camSize;
     private float lerpSpeed = 0f;
@@ -51,6 +60,7 @@ public class playerBehavior : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
+        sprender = GetComponent<SpriteRenderer>();
         //rb = GetComponent<Rigidbody2D>();
 
         camSize = cam.orthographicSize;
@@ -81,16 +91,27 @@ public class playerBehavior : MonoBehaviour
         }
         */
 
-        var mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        
-        //flips player to face the camera
-        if(mousePos.x < transform.localScale.x)
+        //checks to make sure player is moving to play walking sound
+        if ((transform.position - lastLocation).magnitude > stepDistance)
         {
-            transform.localScale = new Vector3(-1, 1, 1);
+            lastLocation = transform.position;
+            SFXManager.instance.PlaySoundRandom(SFXManager.instance.walking);
         }
-        else
+
+        //this flips the character towards the direction their mouse is pointing in
+        mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        var mouseTemp = (mousePos - (Vector2)transform.position).normalized;
+        //left
+        if (mouseTemp.x < 0 && (mouseTemp.y < -1 || mouseTemp.y < 1))
         {
-            transform.localScale = new Vector3(1, 1, 1);
+            //transform.localScale = new Vector3(-1, 1, 1);
+            sprender.flipX = true;
+        }
+        //right
+        else if (mouseTemp.x >= 0 && (mouseTemp.y < -1 || mouseTemp.y < 1))
+        {
+            //transform.localScale = new Vector3(1, 1, 1);
+            sprender.flipX = false;
         }
 
         //player control only works while textbox is not active in scene or not being jumpscared
@@ -154,17 +175,13 @@ public class playerBehavior : MonoBehaviour
 
     void movePlayer(Vector2 direction)
     {
-        //if (!dialogueBox.activeInHierarchy || !jumpscareCanvas.activeInHierarchy) 
-        //{ 
-            transform.Translate(direction * playerSpeed * Time.deltaTime * playerUpgrades.instance.playerSpeed * playerUpgrades.instance.dontMove);
-        //}
+        transform.Translate(direction * playerSpeed * Time.deltaTime * playerUpgrades.instance.dontMove);
     }
 
     void FixedUpdate()
     {
         //if (!dialogueBox.activeInHierarchy || !jumpscareCanvas.activeInHierarchy)
         {
-
             movePlayer(playerMovement);
         }
     }
@@ -213,6 +230,8 @@ public class playerBehavior : MonoBehaviour
             jumpscareCanvas.GetComponent<jumpscareCanvas>().scaredBy = 1;
             jumpscareTrigger(collision);
         }
+
+        //jolly jerry to be implemented later
     }
 
     private void OnTriggerStay2D(Collider2D collision)
