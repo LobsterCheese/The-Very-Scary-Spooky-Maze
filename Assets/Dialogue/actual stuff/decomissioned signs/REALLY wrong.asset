@@ -10,13 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f7f100ca5acb80e419fb880c74681589, type: 3}
-  m_Name: Maze3SignDialogue
+  m_Name: REALLY wrong
   m_EditorClassIdentifier: 
   dialogueList:
-  - Welcome to the third maze!
-  - It is... well, hm. It's only kind of recommended that you bring a flashlight
-    for this one.
-  - 'This trail only has one denizen, but be warned: he''s real happy to make friends.'
-  - Be careful where you point that flashlight.
-  - Your markers might become a snack if you're not careful with them!
-  - Happy trails!
+  - Oh, yeah this is REALLY the wrong way.
+  - You'll be fine.
+  - You'll probably be fine, yeah.
+  - Yeah...
+  - ...
+  - Good luck.

@@ -1001,6 +1001,13 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 68b98521a462df047bdc41e3b02fe6f4, type: 3}
   - {fileID: 8300000, guid: 7db8e93bee378244880e885273c2be2f, type: 3}
   jumpscare: []
+  skelly:
+  - {fileID: 8300000, guid: 48ae99de1d98fa149bff496e99e7a15c, type: 3}
+  - {fileID: 8300000, guid: 7cc0c2d3d5fd77e438e809cd64a431e6, type: 3}
+  - {fileID: 8300000, guid: 467a0b8728b71c24db6bcd8bc0cd7a80, type: 3}
+  - {fileID: 8300000, guid: c3265fabb964ca54aa1cd8875faff579, type: 3}
+  - {fileID: 8300000, guid: d6ee72384398ab546a4168ac0049a8eb, type: 3}
+  - {fileID: 8300000, guid: 41dd51915aa85c4479cc3979712df968, type: 3}
 --- !u!82 &1253871562
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1013,7 +1020,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 0.8
   m_Pitch: 1
   Loop: 0

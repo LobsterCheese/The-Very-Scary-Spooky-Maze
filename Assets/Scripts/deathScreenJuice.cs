@@ -4,16 +4,18 @@ using UnityEngine;
 
 public class deathScreenJuice : MonoBehaviour
 {
-
-    public float offset;
+    [SerializeField]
+    private float offset;
     private float offsetGoal;
 
     private float startX;
     private float movementTimer = 0;
 
     [Header("Turn this on if you want rotation")]
-    public bool rotate;
-    public float rotAmt;
+    [SerializeField]
+    private bool rotate;
+    [SerializeField]
+    private float rotAmt;
     private float startRotZ;
 
     private void Awake()
@@ -22,12 +24,6 @@ public class deathScreenJuice : MonoBehaviour
         startX = transform.position.x;
         offsetGoal = transform.position.x - offset;
         movementTimer = 0;
-    }
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
     }
 
     // Update is called once per frame

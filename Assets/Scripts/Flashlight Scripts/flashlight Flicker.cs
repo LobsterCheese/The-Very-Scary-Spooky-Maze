@@ -51,14 +51,11 @@ public class flashlightFlicker : MonoBehaviour
             beam.intensity = 1;
         }
 
-        //Debug.Log(on);
-
         //if flashlight life is greater than max, it stops filling up to prevent overflow
         if(on >= maxFlashLife && !forceOff)
         {
             on = maxFlashLife;
             forceOff = false;
-            //hitbox.enabled = true;
         }
 
         //if flashlight runs out of life, turn off, player cannot turn it back on until it's fully charged
@@ -72,8 +69,6 @@ public class flashlightFlicker : MonoBehaviour
         {
             on += Time.deltaTime;
         }
-
-        //Debug.Log(on);
 
         //when flashlight is flickering, drain life and randomize opacity
         if (flashing)
@@ -102,6 +97,7 @@ public class flashlightFlicker : MonoBehaviour
 
     }
 
+    //if flashlight is on happy henry, it will start flickering
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Happy") && !forceOff)
@@ -110,6 +106,7 @@ public class flashlightFlicker : MonoBehaviour
         }
     }
 
+    //if flashlight is taken off happy henry and still has charge, it goes back to normal
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Happy"))

@@ -9,7 +9,8 @@ public class upgradeConsumable : MonoBehaviour
     [SerializeField]
     private bool onAndOff;
 
-    private void Awake()
+    //if player has already made it to the checkpoint, delete this game object so it doesn't respawn
+    private void Start()
     {
         if (playerUpgrades.instance.checkpoint)
         {
@@ -19,7 +20,6 @@ public class upgradeConsumable : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //Debug.Log("happening");
         //if player picks up consumable, upgrade corresponding stat and then destroy self
         if (collision.gameObject.CompareTag("Guy"))
         {

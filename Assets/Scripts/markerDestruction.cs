@@ -1,37 +1,31 @@
 using UnityEngine;
 
-public class summonTextbox : MonoBehaviour
+public class markerDestruction : MonoBehaviour
 {
 
-    public GameObject textBox;
-    public NPCDialogue dialogue;
-
-    private bool canTalk;
+    private bool canDestroy = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        //summons textbox object
-        if ((Input.GetKeyDown(KeyCode.E) && !textBox.activeInHierarchy) && canTalk)
+        if(canDestroy && Input.GetKeyDown(KeyCode.Space))
         {
-            textBox.GetComponent<Textbox>().index = 0;
-            textBox.GetComponent<Textbox>().npcText = dialogue;
-            textBox.SetActive(true);
+            playerUpgrades.instance.currentMarkers++;
+            Destroy(gameObject);
         }
     }
 
-    //checks if player is in range to talk or not
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Guy"))
         {
-            canTalk = true;
+            canDestroy = true;
         }
     }
 
@@ -39,7 +33,8 @@ public class summonTextbox : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Guy"))
         {
-            canTalk = false;
+            canDestroy = false;
         }
     }
+
 }

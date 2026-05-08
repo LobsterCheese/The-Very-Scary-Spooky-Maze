@@ -37,6 +37,7 @@ public class playerBehavior : MonoBehaviour
     [SerializeField]
     private float stepDistance;
     private Vector3 lastLocation;
+    private bool moved = false;
 
     private Vector2 mousePos;
 
@@ -71,10 +72,11 @@ public class playerBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        playerMarkersText.text = marker.ToString();
-        maxMarkersText.text = maxMarkers.ToString();
+        //this sets players markers to the max 
+        playerMarkersText.text = playerUpgrades.instance.currentMarkers.ToString();
+        maxMarkersText.text = playerUpgrades.instance.markerAmount.ToString();
 
-        maxMarkers = playerUpgrades.instance.markerAmount;
+        //maxMarkers = playerUpgrades.instance.markerAmount;
 
         //for testing and debugging purposes
         //resets scene in case you get stuck or want to retry
@@ -91,12 +93,16 @@ public class playerBehavior : MonoBehaviour
         }
         */
 
-        //checks to make sure player is moving to play walking sound
-        if ((transform.position - lastLocation).magnitude > stepDistance)
+        //Debug.Log(((transform.position - lastLocation).magnitude > stepDistance));
+
+        
+        //checks to make sure player is moving to play walking sound AFTER they have pressed any buttons
+        if ((transform.position - lastLocation).magnitude > stepDistance && moved)
         {
             lastLocation = transform.position;
             SFXManager.instance.PlaySoundRandom(SFXManager.instance.walking);
         }
+        
 
         //this flips the character towards the direction their mouse is pointing in
         mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -104,13 +110,11 @@ public class playerBehavior : MonoBehaviour
         //left
         if (mouseTemp.x < 0 && (mouseTemp.y < -1 || mouseTemp.y < 1))
         {
-            //transform.localScale = new Vector3(-1, 1, 1);
             sprender.flipX = true;
         }
         //right
         else if (mouseTemp.x >= 0 && (mouseTemp.y < -1 || mouseTemp.y < 1))
         {
-            //transform.localScale = new Vector3(1, 1, 1);
             sprender.flipX = false;
         }
 
@@ -135,6 +139,7 @@ public class playerBehavior : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D))
             {
+                moved = true;
                 anim.runtimeAnimatorController = walking;
             }
             else if (!Input.anyKey)
@@ -144,18 +149,22 @@ public class playerBehavior : MonoBehaviour
         }
 
         //places a marker to keep track of where you have been
-        if (Input.GetKeyDown(KeyCode.Space) && canPlaceMarker && marker > 0 && !canPlaceMarkerSafe)
+        if (Input.GetKeyDown(KeyCode.Space) && canPlaceMarker && playerUpgrades.instance.currentMarkers > 0 && !canPlaceMarkerSafe)
         {
-            marker--;
+            playerUpgrades.instance.currentMarkers--;
             Instantiate(markerPrefab, transform.position, Quaternion.identity);
         }
+
+        /*
         //if there is already a marker here, return it to the player
-        else if (Input.GetKeyDown(KeyCode.Space) && !canPlaceMarker && !canPlaceMarkerSafe)
+        else if (Input.GetKeyDown(KeyCode.Space) && closestMarker != null)
         {
             marker++;
             Destroy(closestMarker);
         }
-
+        */
+        
+        //gets player input
         playerMovement = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
 
         //if you are within a safe zone, camera expands outwards and shrinks respectively
@@ -173,6 +182,7 @@ public class playerBehavior : MonoBehaviour
         }
     }
 
+    //moves player
     void movePlayer(Vector2 direction)
     {
         transform.Translate(direction * playerSpeed * Time.deltaTime * playerUpgrades.instance.dontMove);
@@ -180,10 +190,7 @@ public class playerBehavior : MonoBehaviour
 
     void FixedUpdate()
     {
-        //if (!dialogueBox.activeInHierarchy || !jumpscareCanvas.activeInHierarchy)
-        {
-            movePlayer(playerMovement);
-        }
+        movePlayer(playerMovement);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -193,29 +200,29 @@ public class playerBehavior : MonoBehaviour
         {
             if(!jumpscareCanvas.activeInHierarchy)
             {
-                PlayerUI.SetActive(false);
                 jumpscareCanvas.GetComponent<jumpscareCanvas>().scaredBy = 0;
                 jumpscareNT(collision);
             }
         }
 
+        //if you run into happy henry, get jumpscared
         if (collision.gameObject.CompareTag("Happy"))
         {
             if (!jumpscareCanvas.activeInHierarchy)
             {
-                PlayerUI.SetActive(false);
                 jumpscareCanvas.GetComponent<jumpscareCanvas>().scaredBy = 2;
                 jumpscareNT(collision);
             }
         }
-
+        
         //if you are close to a marker, you cannot place another
         if (collision.gameObject.CompareTag("Marker"))
         {
             canPlaceMarker = false;
-            closestMarker = collision.gameObject;
         }
+        
 
+        //if you reach the safe zone, set the checkpoint flag to true, player respawns from here after this
         if (collision.gameObject.CompareTag("Safe"))
         {
             playerUpgrades.instance.checkpoint = true;
@@ -240,9 +247,16 @@ public class playerBehavior : MonoBehaviour
         if (collision.gameObject.CompareTag("Safe"))
         {
             canPlaceMarkerSafe = true;
-            //also replenishes your markers
-            maxMarkers = playerUpgrades.instance.markerAmount;
-            marker = maxMarkers;
+            //also replenishes your markers, setting it to the max
+            //maxMarkers = playerUpgrades.instance.markerAmount;
+            //playerUpgrades.instance.currentMarkers = maxMarkers;
+
+            playerUpgrades.instance.currentMarkers = playerUpgrades.instance.markerAmount;
+        }
+
+        if (collision.gameObject.CompareTag("Marker"))
+        {
+            canPlaceMarker = false;
         }
     }
 
@@ -261,7 +275,7 @@ public class playerBehavior : MonoBehaviour
     }
 
     //this section is dedicated to the methods that summon the proper UI for when jumpscares are activated
-    //sets a jumpscare if the colliding mob does not have a trigger (skelly)
+    //sets a jumpscare if the colliding mob does not have a trigger (skelly & jolly jerry)
     private void jumpscareTrigger(Collision2D collision)
     {
         if (!jumpscareCanvas.activeInHierarchy)

@@ -10,8 +10,10 @@ public class playerUpgrades : MonoBehaviour
     //whether or not you can turn your flashlight on and off
     public bool onAndOff = false;
 
-    //how many markers you can plaace
+    //maximum capacity of markers
     public int markerAmount = 3;
+    //how many markers the player has on hand
+    public int currentMarkers;
 
     public bool checkpoint;
 
@@ -27,6 +29,6 @@ public class playerUpgrades : MonoBehaviour
         }
 
         DontDestroyOnLoad(gameObject);
-
+        currentMarkers = markerAmount;
     }
 }

@@ -17,8 +17,8 @@ public class flashlightNew : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Debug.Log(transform.up);
 
+        //this points the flashlight at the mouse
         transform.position = player.transform.position;
 
         mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);

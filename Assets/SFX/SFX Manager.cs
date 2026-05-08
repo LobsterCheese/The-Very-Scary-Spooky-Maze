@@ -7,12 +7,12 @@ public class SFXManager : MonoBehaviour
 
     public AudioClip[] walking;
     public AudioClip[] jumpscare;
+    public AudioClip[] skelly;
 
     AudioSource source;
 
     private void Awake()
     {
-
         source = GetComponent<AudioSource>();
 
         if (instance == null)
@@ -28,14 +28,15 @@ public class SFXManager : MonoBehaviour
 
     }
 
+    //this randomizes pitch and plays random clips for variety, use this method for sfx
     public void PlaySoundRandom(AudioClip[] clips)
     {
         AudioClip clip = clips[Random.Range(0, clips.Length)];
-        source.pitch = Random.Range(0.95f, 1.05f);
+        source.pitch = Random.Range(0.80f, 1.10f);
         source.PlayOneShot(clip);
-        //Debug.Log("yo");
     }
 
+    //plays jumpscare sound
     public void playJump(int monster)
     {
         /*

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8406406634344212226}
   m_Layer: 0
   m_Name: flashlight
-  m_TagString: Flashlight
+  m_TagString: Marker
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -80,6 +80,7 @@ GameObject:
   - component: {fileID: 3878483208917001340}
   - component: {fileID: 7983284054961460763}
   - component: {fileID: 2098277561353169310}
+  - component: {fileID: 3593774417249112992}
   m_Layer: 0
   m_Name: marker
   m_TagString: Marker
@@ -193,8 +194,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.02028639, y: 0.03815925}
-  m_Size: {x: 2.3591826, y: 2.4960697}
+  m_Offset: {x: 0.00607872, y: -0.061297894}
+  m_Size: {x: 1.6866636, y: 2.5813198}
   m_Direction: 0
 --- !u!95 &2098277561353169310
 Animator:
@@ -218,6 +219,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &3593774417249112992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5421346460620282338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e626572f85abaae4294577c7b39a4dbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9105115277713750395
 GameObject:
   m_ObjectHideFlags: 0
