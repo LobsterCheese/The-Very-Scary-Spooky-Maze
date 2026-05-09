@@ -23,7 +23,10 @@ public class upgradeConsumable : MonoBehaviour
         //if player picks up consumable, upgrade corresponding stat and then destroy self
         if (collision.gameObject.CompareTag("Guy"))
         {
+            SFXManager.instance.PlaySoundRandom(SFXManager.instance.upgrade);
+            //upgrades by whatever amount you fill in
             playerUpgrades.instance.markerAmount += upgradeAmount;
+            //if on and off is ticked, this allows player to turn on and off the flashlight
             if (onAndOff)
             {
                 playerUpgrades.instance.onAndOff = true;

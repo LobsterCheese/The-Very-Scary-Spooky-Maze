@@ -41,12 +41,14 @@ public class flashlightFlicker : MonoBehaviour
         //if player presses button and has unlocked upgrade, they will turn the flashlight off
         if (Input.GetMouseButtonDown(0) && !forceOff && hitbox.enabled && playerUpgrades.instance.onAndOff)
         {
+            SFXManager.instance.PlaySoundRandom(SFXManager.instance.flashlight);
             hitbox.enabled = !hitbox.enabled;
             beam.intensity = 0;
         }
         //if player presses button and has unlocked upgrade, they will turn flashlight on
         else if (Input.GetMouseButtonDown(0) && !forceOff && !hitbox.enabled && playerUpgrades.instance.onAndOff)
         {
+            SFXManager.instance.PlaySoundRandom(SFXManager.instance.flashlight);
             hitbox.enabled = !hitbox.enabled;
             beam.intensity = 1;
         }

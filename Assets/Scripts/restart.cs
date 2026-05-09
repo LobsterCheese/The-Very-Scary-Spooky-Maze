@@ -7,6 +7,7 @@ public class restart : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            playerUpgrades.instance.currentMarkers = playerUpgrades.instance.markerAmount;
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }

@@ -125,6 +125,7 @@ GameObject:
   - component: {fileID: 804007485665088393}
   - component: {fileID: 9095752215809798213}
   - component: {fileID: 4560711466751884404}
+  - component: {fileID: -4638043290330755941}
   m_Layer: 0
   m_Name: Happy Henry
   m_TagString: Happy
@@ -316,10 +317,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentSpeed: 0
   textbox: {fileID: 0}
-  deathCanvas: {fileID: 0}
   jumpscareCanvas: {fileID: 0}
-  minDist: 0
-  maxDist: 0
+  minDist: 1
+  maxDist: 40
   mobSpeed: 1.5
   mobSlowedSpeed: 0.75
   HP: 3
@@ -340,7 +340,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -422,3 +422,15 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &-4638043290330755941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8073587401290305573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa61390f8f142354390f546848dd6fd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

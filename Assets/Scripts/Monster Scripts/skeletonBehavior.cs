@@ -9,6 +9,11 @@ public class skeletonBehavior : MonoBehaviour
 
     private bool freeze;
 
+    [SerializeField]
+    private GameObject dialogueBox;
+    [SerializeField]
+    private GameObject jumpscareCanvas;
+
     private SpriteRenderer sprender;
     private int randPose;
 
@@ -40,7 +45,10 @@ public class skeletonBehavior : MonoBehaviour
         //plays skeleton sound if player spots it
         if (collision.gameObject.CompareTag("Flashlight") || collision.gameObject.CompareTag("Marker"))
         {
-            SFXManager.instance.PlaySoundRandom(SFXManager.instance.skelly);
+            if (!dialogueBox.activeInHierarchy || !jumpscareCanvas.activeInHierarchy)
+            {
+                SFXManager.instance.PlaySoundRandom(SFXManager.instance.skelly);
+            }
         }
     }
 

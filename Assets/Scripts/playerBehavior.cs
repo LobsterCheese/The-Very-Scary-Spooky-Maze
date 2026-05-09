@@ -149,8 +149,9 @@ public class playerBehavior : MonoBehaviour
         }
 
         //places a marker to keep track of where you have been
-        if (Input.GetKeyDown(KeyCode.Space) && canPlaceMarker && playerUpgrades.instance.currentMarkers > 0 && !canPlaceMarkerSafe)
+        if (Input.GetKeyDown(KeyCode.Space) && canPlaceMarker && playerUpgrades.instance.currentMarkers > 0 && !canPlaceMarkerSafe && (!dialogueBox.activeInHierarchy || !jumpscareCanvas.activeInHierarchy))
         {
+            SFXManager.instance.PlaySoundRandom(SFXManager.instance.marker);
             playerUpgrades.instance.currentMarkers--;
             Instantiate(markerPrefab, transform.position, Quaternion.identity);
         }
@@ -200,6 +201,7 @@ public class playerBehavior : MonoBehaviour
         {
             if(!jumpscareCanvas.activeInHierarchy)
             {
+                SFXManager.instance.PlaySoundRandom(SFXManager.instance.spookJumpscare);
                 jumpscareCanvas.GetComponent<jumpscareCanvas>().scaredBy = 0;
                 jumpscareNT(collision);
             }
@@ -210,6 +212,7 @@ public class playerBehavior : MonoBehaviour
         {
             if (!jumpscareCanvas.activeInHierarchy)
             {
+                SFXManager.instance.PlaySoundRandom(SFXManager.instance.henryJumpscare);
                 jumpscareCanvas.GetComponent<jumpscareCanvas>().scaredBy = 2;
                 jumpscareNT(collision);
             }
@@ -234,6 +237,7 @@ public class playerBehavior : MonoBehaviour
         //if you run into a skeleton that is currently moving, get jumpscared
         if (collision.gameObject.CompareTag("Skelly") && collision.gameObject.GetComponent<spookBehavior>().currentSpeed != 0)
         {
+            SFXManager.instance.PlaySoundRandom(SFXManager.instance.skellyJumpscare);
             jumpscareCanvas.GetComponent<jumpscareCanvas>().scaredBy = 1;
             jumpscareTrigger(collision);
         }
@@ -248,9 +252,6 @@ public class playerBehavior : MonoBehaviour
         {
             canPlaceMarkerSafe = true;
             //also replenishes your markers, setting it to the max
-            //maxMarkers = playerUpgrades.instance.markerAmount;
-            //playerUpgrades.instance.currentMarkers = maxMarkers;
-
             playerUpgrades.instance.currentMarkers = playerUpgrades.instance.markerAmount;
         }
 

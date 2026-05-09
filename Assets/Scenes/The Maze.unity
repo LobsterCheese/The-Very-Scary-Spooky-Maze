@@ -1236,6 +1236,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skelly (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 5991463872702779946, guid: 2505a6d5e55e12b4aa4cb7e8343a9803, type: 3}
+      propertyPath: dialogueBox
+      value: 
+      objectReference: {fileID: 708904581}
+    - target: {fileID: 5991463872702779946, guid: 2505a6d5e55e12b4aa4cb7e8343a9803, type: 3}
+      propertyPath: jumpscareCanvas
+      value: 
+      objectReference: {fileID: 721584924}
     - target: {fileID: 7810783279478824407, guid: 2505a6d5e55e12b4aa4cb7e8343a9803, type: 3}
       propertyPath: textbox
       value: 
@@ -1580,6 +1588,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skelly (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5991463872702779946, guid: 2505a6d5e55e12b4aa4cb7e8343a9803, type: 3}
+      propertyPath: dialogueBox
+      value: 
+      objectReference: {fileID: 708904581}
+    - target: {fileID: 5991463872702779946, guid: 2505a6d5e55e12b4aa4cb7e8343a9803, type: 3}
+      propertyPath: jumpscareCanvas
+      value: 
+      objectReference: {fileID: 721584924}
     - target: {fileID: 7810783279478824407, guid: 2505a6d5e55e12b4aa4cb7e8343a9803, type: 3}
       propertyPath: textbox
       value: 
@@ -3123,6 +3139,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skelly (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 5991463872702779946, guid: 2505a6d5e55e12b4aa4cb7e8343a9803, type: 3}
+      propertyPath: dialogueBox
+      value: 
+      objectReference: {fileID: 708904581}
+    - target: {fileID: 5991463872702779946, guid: 2505a6d5e55e12b4aa4cb7e8343a9803, type: 3}
+      propertyPath: jumpscareCanvas
+      value: 
+      objectReference: {fileID: 721584924}
     - target: {fileID: 7810783279478824407, guid: 2505a6d5e55e12b4aa4cb7e8343a9803, type: 3}
       propertyPath: textbox
       value: 
@@ -4694,6 +4718,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skelly (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 5991463872702779946, guid: 2505a6d5e55e12b4aa4cb7e8343a9803, type: 3}
+      propertyPath: dialogueBox
+      value: 
+      objectReference: {fileID: 708904581}
+    - target: {fileID: 5991463872702779946, guid: 2505a6d5e55e12b4aa4cb7e8343a9803, type: 3}
+      propertyPath: jumpscareCanvas
+      value: 
+      objectReference: {fileID: 721584924}
     - target: {fileID: 7810783279478824407, guid: 2505a6d5e55e12b4aa4cb7e8343a9803, type: 3}
       propertyPath: textbox
       value: 
@@ -6751,6 +6783,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skelly (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 5991463872702779946, guid: 2505a6d5e55e12b4aa4cb7e8343a9803, type: 3}
+      propertyPath: dialogueBox
+      value: 
+      objectReference: {fileID: 708904581}
+    - target: {fileID: 5991463872702779946, guid: 2505a6d5e55e12b4aa4cb7e8343a9803, type: 3}
+      propertyPath: jumpscareCanvas
+      value: 
+      objectReference: {fileID: 721584924}
     - target: {fileID: 7810783279478824407, guid: 2505a6d5e55e12b4aa4cb7e8343a9803, type: 3}
       propertyPath: textbox
       value: 
@@ -7855,6 +7895,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skelly (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 5991463872702779946, guid: 2505a6d5e55e12b4aa4cb7e8343a9803, type: 3}
+      propertyPath: dialogueBox
+      value: 
+      objectReference: {fileID: 708904581}
+    - target: {fileID: 5991463872702779946, guid: 2505a6d5e55e12b4aa4cb7e8343a9803, type: 3}
+      propertyPath: jumpscareCanvas
+      value: 
+      objectReference: {fileID: 721584924}
     - target: {fileID: 7810783279478824407, guid: 2505a6d5e55e12b4aa4cb7e8343a9803, type: 3}
       propertyPath: textbox
       value: 
@@ -9313,11 +9361,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1454840725010090662, guid: 2505a6d5e55e12b4aa4cb7e8343a9803, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 312.4
+      value: 305.92
       objectReference: {fileID: 0}
     - target: {fileID: 1454840725010090662, guid: 2505a6d5e55e12b4aa4cb7e8343a9803, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -158
+      value: -160.84
       objectReference: {fileID: 0}
     - target: {fileID: 1454840725010090662, guid: 2505a6d5e55e12b4aa4cb7e8343a9803, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9355,6 +9403,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skelly (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 5991463872702779946, guid: 2505a6d5e55e12b4aa4cb7e8343a9803, type: 3}
+      propertyPath: dialogueBox
+      value: 
+      objectReference: {fileID: 708904581}
+    - target: {fileID: 5991463872702779946, guid: 2505a6d5e55e12b4aa4cb7e8343a9803, type: 3}
+      propertyPath: jumpscareCanvas
+      value: 
+      objectReference: {fileID: 721584924}
     - target: {fileID: 7810783279478824407, guid: 2505a6d5e55e12b4aa4cb7e8343a9803, type: 3}
       propertyPath: textbox
       value: 
@@ -11165,6 +11221,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skelly (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 5991463872702779946, guid: 2505a6d5e55e12b4aa4cb7e8343a9803, type: 3}
+      propertyPath: dialogueBox
+      value: 
+      objectReference: {fileID: 708904581}
+    - target: {fileID: 5991463872702779946, guid: 2505a6d5e55e12b4aa4cb7e8343a9803, type: 3}
+      propertyPath: jumpscareCanvas
+      value: 
+      objectReference: {fileID: 721584924}
     - target: {fileID: 7810783279478824407, guid: 2505a6d5e55e12b4aa4cb7e8343a9803, type: 3}
       propertyPath: textbox
       value: 
@@ -12834,6 +12898,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skelly (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5991463872702779946, guid: 2505a6d5e55e12b4aa4cb7e8343a9803, type: 3}
+      propertyPath: dialogueBox
+      value: 
+      objectReference: {fileID: 708904581}
+    - target: {fileID: 5991463872702779946, guid: 2505a6d5e55e12b4aa4cb7e8343a9803, type: 3}
+      propertyPath: jumpscareCanvas
+      value: 
+      objectReference: {fileID: 721584924}
     - target: {fileID: 7810783279478824407, guid: 2505a6d5e55e12b4aa4cb7e8343a9803, type: 3}
       propertyPath: textbox
       value: 
@@ -13468,6 +13540,14 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: -0.21105272
       objectReference: {fileID: 0}
+    - target: {fileID: 5991463872702779946, guid: 2505a6d5e55e12b4aa4cb7e8343a9803, type: 3}
+      propertyPath: dialogueBox
+      value: 
+      objectReference: {fileID: 708904581}
+    - target: {fileID: 5991463872702779946, guid: 2505a6d5e55e12b4aa4cb7e8343a9803, type: 3}
+      propertyPath: jumpscareCanvas
+      value: 
+      objectReference: {fileID: 721584924}
     - target: {fileID: 7810783279478824407, guid: 2505a6d5e55e12b4aa4cb7e8343a9803, type: 3}
       propertyPath: textbox
       value: 
@@ -13925,6 +14005,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skelly (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 5991463872702779946, guid: 2505a6d5e55e12b4aa4cb7e8343a9803, type: 3}
+      propertyPath: dialogueBox
+      value: 
+      objectReference: {fileID: 708904581}
+    - target: {fileID: 5991463872702779946, guid: 2505a6d5e55e12b4aa4cb7e8343a9803, type: 3}
+      propertyPath: jumpscareCanvas
+      value: 
+      objectReference: {fileID: 721584924}
     - target: {fileID: 7810783279478824407, guid: 2505a6d5e55e12b4aa4cb7e8343a9803, type: 3}
       propertyPath: textbox
       value: 
@@ -16873,6 +16961,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skelly (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 5991463872702779946, guid: 2505a6d5e55e12b4aa4cb7e8343a9803, type: 3}
+      propertyPath: dialogueBox
+      value: 
+      objectReference: {fileID: 708904581}
+    - target: {fileID: 5991463872702779946, guid: 2505a6d5e55e12b4aa4cb7e8343a9803, type: 3}
+      propertyPath: jumpscareCanvas
+      value: 
+      objectReference: {fileID: 721584924}
     - target: {fileID: 7810783279478824407, guid: 2505a6d5e55e12b4aa4cb7e8343a9803, type: 3}
       propertyPath: textbox
       value: 
@@ -17349,6 +17445,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skelly (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 5991463872702779946, guid: 2505a6d5e55e12b4aa4cb7e8343a9803, type: 3}
+      propertyPath: dialogueBox
+      value: 
+      objectReference: {fileID: 708904581}
+    - target: {fileID: 5991463872702779946, guid: 2505a6d5e55e12b4aa4cb7e8343a9803, type: 3}
+      propertyPath: jumpscareCanvas
+      value: 
+      objectReference: {fileID: 721584924}
     - target: {fileID: 7810783279478824407, guid: 2505a6d5e55e12b4aa4cb7e8343a9803, type: 3}
       propertyPath: textbox
       value: 
@@ -17557,6 +17661,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skelly (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 5991463872702779946, guid: 2505a6d5e55e12b4aa4cb7e8343a9803, type: 3}
+      propertyPath: dialogueBox
+      value: 
+      objectReference: {fileID: 708904581}
+    - target: {fileID: 5991463872702779946, guid: 2505a6d5e55e12b4aa4cb7e8343a9803, type: 3}
+      propertyPath: jumpscareCanvas
+      value: 
+      objectReference: {fileID: 721584924}
     - target: {fileID: 7810783279478824407, guid: 2505a6d5e55e12b4aa4cb7e8343a9803, type: 3}
       propertyPath: textbox
       value: 
@@ -17765,6 +17877,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skelly (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 5991463872702779946, guid: 2505a6d5e55e12b4aa4cb7e8343a9803, type: 3}
+      propertyPath: dialogueBox
+      value: 
+      objectReference: {fileID: 708904581}
+    - target: {fileID: 5991463872702779946, guid: 2505a6d5e55e12b4aa4cb7e8343a9803, type: 3}
+      propertyPath: jumpscareCanvas
+      value: 
+      objectReference: {fileID: 721584924}
     - target: {fileID: 7810783279478824407, guid: 2505a6d5e55e12b4aa4cb7e8343a9803, type: 3}
       propertyPath: textbox
       value: 
@@ -18938,6 +19058,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skelly (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 5991463872702779946, guid: 2505a6d5e55e12b4aa4cb7e8343a9803, type: 3}
+      propertyPath: dialogueBox
+      value: 
+      objectReference: {fileID: 708904581}
+    - target: {fileID: 5991463872702779946, guid: 2505a6d5e55e12b4aa4cb7e8343a9803, type: 3}
+      propertyPath: jumpscareCanvas
+      value: 
+      objectReference: {fileID: 721584924}
     - target: {fileID: 7810783279478824407, guid: 2505a6d5e55e12b4aa4cb7e8343a9803, type: 3}
       propertyPath: textbox
       value: 
@@ -19012,6 +19140,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skelly (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5991463872702779946, guid: 2505a6d5e55e12b4aa4cb7e8343a9803, type: 3}
+      propertyPath: dialogueBox
+      value: 
+      objectReference: {fileID: 708904581}
+    - target: {fileID: 5991463872702779946, guid: 2505a6d5e55e12b4aa4cb7e8343a9803, type: 3}
+      propertyPath: jumpscareCanvas
+      value: 
+      objectReference: {fileID: 721584924}
     - target: {fileID: 7810783279478824407, guid: 2505a6d5e55e12b4aa4cb7e8343a9803, type: 3}
       propertyPath: textbox
       value: 
@@ -20850,6 +20986,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skelly (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 5991463872702779946, guid: 2505a6d5e55e12b4aa4cb7e8343a9803, type: 3}
+      propertyPath: dialogueBox
+      value: 
+      objectReference: {fileID: 708904581}
+    - target: {fileID: 5991463872702779946, guid: 2505a6d5e55e12b4aa4cb7e8343a9803, type: 3}
+      propertyPath: jumpscareCanvas
+      value: 
+      objectReference: {fileID: 721584924}
     - target: {fileID: 7810783279478824407, guid: 2505a6d5e55e12b4aa4cb7e8343a9803, type: 3}
       propertyPath: textbox
       value: 
@@ -21002,6 +21146,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skelly (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 5991463872702779946, guid: 2505a6d5e55e12b4aa4cb7e8343a9803, type: 3}
+      propertyPath: dialogueBox
+      value: 
+      objectReference: {fileID: 708904581}
+    - target: {fileID: 5991463872702779946, guid: 2505a6d5e55e12b4aa4cb7e8343a9803, type: 3}
+      propertyPath: jumpscareCanvas
+      value: 
+      objectReference: {fileID: 721584924}
     - target: {fileID: 7810783279478824407, guid: 2505a6d5e55e12b4aa4cb7e8343a9803, type: 3}
       propertyPath: textbox
       value: 
@@ -21076,6 +21228,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skelly (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5991463872702779946, guid: 2505a6d5e55e12b4aa4cb7e8343a9803, type: 3}
+      propertyPath: dialogueBox
+      value: 
+      objectReference: {fileID: 708904581}
+    - target: {fileID: 5991463872702779946, guid: 2505a6d5e55e12b4aa4cb7e8343a9803, type: 3}
+      propertyPath: jumpscareCanvas
+      value: 
+      objectReference: {fileID: 721584924}
     - target: {fileID: 7810783279478824407, guid: 2505a6d5e55e12b4aa4cb7e8343a9803, type: 3}
       propertyPath: textbox
       value: 
@@ -21418,6 +21578,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skelly (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 5991463872702779946, guid: 2505a6d5e55e12b4aa4cb7e8343a9803, type: 3}
+      propertyPath: dialogueBox
+      value: 
+      objectReference: {fileID: 708904581}
+    - target: {fileID: 5991463872702779946, guid: 2505a6d5e55e12b4aa4cb7e8343a9803, type: 3}
+      propertyPath: jumpscareCanvas
+      value: 
+      objectReference: {fileID: 721584924}
     - target: {fileID: 7810783279478824407, guid: 2505a6d5e55e12b4aa4cb7e8343a9803, type: 3}
       propertyPath: textbox
       value: 
@@ -21894,6 +22062,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skelly (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 5991463872702779946, guid: 2505a6d5e55e12b4aa4cb7e8343a9803, type: 3}
+      propertyPath: dialogueBox
+      value: 
+      objectReference: {fileID: 708904581}
+    - target: {fileID: 5991463872702779946, guid: 2505a6d5e55e12b4aa4cb7e8343a9803, type: 3}
+      propertyPath: jumpscareCanvas
+      value: 
+      objectReference: {fileID: 721584924}
     - target: {fileID: 7810783279478824407, guid: 2505a6d5e55e12b4aa4cb7e8343a9803, type: 3}
       propertyPath: textbox
       value: 
@@ -22380,6 +22556,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skelly (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 5991463872702779946, guid: 2505a6d5e55e12b4aa4cb7e8343a9803, type: 3}
+      propertyPath: dialogueBox
+      value: 
+      objectReference: {fileID: 708904581}
+    - target: {fileID: 5991463872702779946, guid: 2505a6d5e55e12b4aa4cb7e8343a9803, type: 3}
+      propertyPath: jumpscareCanvas
+      value: 
+      objectReference: {fileID: 721584924}
     - target: {fileID: 7810783279478824407, guid: 2505a6d5e55e12b4aa4cb7e8343a9803, type: 3}
       propertyPath: textbox
       value: 
@@ -22436,7 +22620,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0
+  m_Intensity: 0.5
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
   m_ApplyToSortingLayers: 00000000
@@ -24059,6 +24243,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skelly (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 5991463872702779946, guid: 2505a6d5e55e12b4aa4cb7e8343a9803, type: 3}
+      propertyPath: dialogueBox
+      value: 
+      objectReference: {fileID: 708904581}
+    - target: {fileID: 5991463872702779946, guid: 2505a6d5e55e12b4aa4cb7e8343a9803, type: 3}
+      propertyPath: jumpscareCanvas
+      value: 
+      objectReference: {fileID: 721584924}
     - target: {fileID: 7810783279478824407, guid: 2505a6d5e55e12b4aa4cb7e8343a9803, type: 3}
       propertyPath: textbox
       value: 
@@ -27041,6 +27233,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skelly (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 5991463872702779946, guid: 2505a6d5e55e12b4aa4cb7e8343a9803, type: 3}
+      propertyPath: dialogueBox
+      value: 
+      objectReference: {fileID: 708904581}
+    - target: {fileID: 5991463872702779946, guid: 2505a6d5e55e12b4aa4cb7e8343a9803, type: 3}
+      propertyPath: jumpscareCanvas
+      value: 
+      objectReference: {fileID: 721584924}
     - target: {fileID: 7810783279478824407, guid: 2505a6d5e55e12b4aa4cb7e8343a9803, type: 3}
       propertyPath: textbox
       value: 
@@ -28779,11 +28979,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 974796857961699365, guid: afd2ea65d067e9b45853ecd0158c29e1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 163.74
+      value: -30.59
       objectReference: {fileID: 0}
     - target: {fileID: 974796857961699365, guid: afd2ea65d067e9b45853ecd0158c29e1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -99.87
+      value: 27.64
       objectReference: {fileID: 0}
     - target: {fileID: 974796857961699365, guid: afd2ea65d067e9b45853ecd0158c29e1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -30249,6 +30449,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skelly
       objectReference: {fileID: 0}
+    - target: {fileID: 5991463872702779946, guid: 2505a6d5e55e12b4aa4cb7e8343a9803, type: 3}
+      propertyPath: dialogueBox
+      value: 
+      objectReference: {fileID: 708904581}
+    - target: {fileID: 5991463872702779946, guid: 2505a6d5e55e12b4aa4cb7e8343a9803, type: 3}
+      propertyPath: jumpscareCanvas
+      value: 
+      objectReference: {fileID: 721584924}
     - target: {fileID: 7810783279478824407, guid: 2505a6d5e55e12b4aa4cb7e8343a9803, type: 3}
       propertyPath: textbox
       value: 
@@ -31223,7 +31431,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7579852332276892704, guid: e09ead26973981848834c1580859b5b5, type: 3}
       propertyPath: m_LocalScale.y
-      value: 11.667479
+      value: 14.862035
       objectReference: {fileID: 0}
     - target: {fileID: 7579852332276892704, guid: e09ead26973981848834c1580859b5b5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -31231,7 +31439,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7579852332276892704, guid: e09ead26973981848834c1580859b5b5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -44.3
+      value: -42.7025
       objectReference: {fileID: 0}
     - target: {fileID: 7579852332276892704, guid: e09ead26973981848834c1580859b5b5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -33866,6 +34074,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skelly (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 5991463872702779946, guid: 2505a6d5e55e12b4aa4cb7e8343a9803, type: 3}
+      propertyPath: dialogueBox
+      value: 
+      objectReference: {fileID: 708904581}
+    - target: {fileID: 5991463872702779946, guid: 2505a6d5e55e12b4aa4cb7e8343a9803, type: 3}
+      propertyPath: jumpscareCanvas
+      value: 
+      objectReference: {fileID: 721584924}
     - target: {fileID: 7810783279478824407, guid: 2505a6d5e55e12b4aa4cb7e8343a9803, type: 3}
       propertyPath: textbox
       value: 
@@ -36432,6 +36648,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skelly (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 5991463872702779946, guid: 2505a6d5e55e12b4aa4cb7e8343a9803, type: 3}
+      propertyPath: dialogueBox
+      value: 
+      objectReference: {fileID: 708904581}
+    - target: {fileID: 5991463872702779946, guid: 2505a6d5e55e12b4aa4cb7e8343a9803, type: 3}
+      propertyPath: jumpscareCanvas
+      value: 
+      objectReference: {fileID: 721584924}
     - target: {fileID: 7810783279478824407, guid: 2505a6d5e55e12b4aa4cb7e8343a9803, type: 3}
       propertyPath: textbox
       value: 
@@ -37126,6 +37350,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skelly
       objectReference: {fileID: 0}
+    - target: {fileID: 5991463872702779946, guid: 2505a6d5e55e12b4aa4cb7e8343a9803, type: 3}
+      propertyPath: dialogueBox
+      value: 
+      objectReference: {fileID: 708904581}
+    - target: {fileID: 5991463872702779946, guid: 2505a6d5e55e12b4aa4cb7e8343a9803, type: 3}
+      propertyPath: jumpscareCanvas
+      value: 
+      objectReference: {fileID: 721584924}
     - target: {fileID: 7810783279478824407, guid: 2505a6d5e55e12b4aa4cb7e8343a9803, type: 3}
       propertyPath: textbox
       value: 

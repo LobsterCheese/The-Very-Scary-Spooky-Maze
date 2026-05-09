@@ -16,6 +16,7 @@ public class markerDestruction : MonoBehaviour
     {
         if(canDestroy && Input.GetKeyDown(KeyCode.Space))
         {
+            SFXManager.instance.PlaySoundRandom(SFXManager.instance.marker);
             playerUpgrades.instance.currentMarkers++;
             Destroy(gameObject);
         }

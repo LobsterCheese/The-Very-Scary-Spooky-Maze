@@ -14,6 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   monsterName: '"HAPPY HENRY"'
   description: A great hugger. Try not to keep your flashlight on him for too long!
-  jumpscareSFX: {fileID: 0}
-  animController: {fileID: 9100000, guid: fd3763e4eb344c34b8723d0505f7a56c, type: 2}
+  animController: {fileID: 9100000, guid: e1ed39a529a0bb54cbe75b39c3273905, type: 2}
   monsterImg: {fileID: 9185539338980561261, guid: 8b40313687fc90c42abd76564aaf5e61, type: 3}

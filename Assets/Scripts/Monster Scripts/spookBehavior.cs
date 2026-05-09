@@ -51,6 +51,7 @@ public class spookBehavior : MonoBehaviour
 
         if (HP <= 0)
         {
+            SFXManager.instance.PlaySoundRandom(SFXManager.instance.spookDie);
             Destroy(gameObject);
         }
 

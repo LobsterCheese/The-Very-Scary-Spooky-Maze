@@ -6,8 +6,14 @@ public class SFXManager : MonoBehaviour
     public static SFXManager instance;
 
     public AudioClip[] walking;
-    public AudioClip[] jumpscare;
+    public AudioClip[] spookJumpscare;
+    public AudioClip[] spookDie;
     public AudioClip[] skelly;
+    public AudioClip[] skellyJumpscare;
+    public AudioClip[] henryJumpscare;
+    public AudioClip[] flashlight;
+    public AudioClip[] upgrade;
+    public AudioClip[] marker;
 
     AudioSource source;
 
@@ -34,17 +40,5 @@ public class SFXManager : MonoBehaviour
         AudioClip clip = clips[Random.Range(0, clips.Length)];
         source.pitch = Random.Range(0.80f, 1.10f);
         source.PlayOneShot(clip);
-    }
-
-    //plays jumpscare sound
-    public void playJump(int monster)
-    {
-        /*
-         * 0 is spook 
-         * 1 is skelly
-         * 2 is happy henry
-         * 3 is jolly jerry
-        */
-        source.PlayOneShot(jumpscare[monster]);
     }
 }
