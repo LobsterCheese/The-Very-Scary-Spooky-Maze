@@ -2,6 +2,10 @@ using UnityEngine;
 
 public class safeZone : MonoBehaviour
 {
+
+    [SerializeField]
+    private int checkpointNum;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -16,7 +20,14 @@ public class safeZone : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Spook" || collision.gameObject.tag == "Skelly")
+        if (collision.gameObject.CompareTag("Guy"))
+        {
+            checkpointManager.instance.currentCheckpoint = checkpointNum;
+            checkpointManager.instance.madeIt = true;
+            checkpointManager.instance.checkpointPosition = transform.position;
+        }
+
+        if(collision.gameObject.CompareTag("Spook") || collision.gameObject.CompareTag("Skelly"))
         {
             Destroy(collision.gameObject);
         }

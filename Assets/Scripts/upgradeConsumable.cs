@@ -9,10 +9,13 @@ public class upgradeConsumable : MonoBehaviour
     [SerializeField]
     private bool onAndOff;
 
+    [SerializeField]
+    private int checkpointCorrespond;
+
     //if player has already made it to the checkpoint, delete this game object so it doesn't respawn
     private void Start()
     {
-        if (playerUpgrades.instance.checkpoint)
+        if (checkpointManager.instance.currentCheckpoint == checkpointCorrespond && checkpointManager.instance.madeIt)
         {
             Destroy(gameObject);
         }

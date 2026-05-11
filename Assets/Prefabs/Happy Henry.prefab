@@ -122,10 +122,10 @@ GameObject:
   - component: {fileID: 5672183261189811732}
   - component: {fileID: 1033386762154682376}
   - component: {fileID: 770952203414644157}
-  - component: {fileID: 804007485665088393}
   - component: {fileID: 9095752215809798213}
   - component: {fileID: 4560711466751884404}
   - component: {fileID: -4638043290330755941}
+  - component: {fileID: 4758792596614869352}
   m_Layer: 0
   m_Name: Happy Henry
   m_TagString: Happy
@@ -253,56 +253,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!68 &804007485665088393
-EdgeCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8073587401290305573}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
-  m_Points:
-  - {x: 2.0994625, y: 2.361841}
-  - {x: 2.319956, y: -2.4751391}
-  - {x: 1.7838717, y: -3.2071214}
-  - {x: -2.892888, y: -2.980261}
-  - {x: -3.1671758, y: -2.369721}
-  - {x: -2.1688423, y: -1.1342018}
-  - {x: 0.2587986, y: 1.8528159}
-  - {x: 1.6530094, y: 3.0356178}
-  - {x: 2.0992427, y: 2.348187}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0
 --- !u!114 &9095752215809798213
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -320,7 +270,7 @@ MonoBehaviour:
   jumpscareCanvas: {fileID: 0}
   minDist: 1
   maxDist: 40
-  mobSpeed: 1.5
+  mobSpeed: 2.25
   mobSlowedSpeed: 0.75
   HP: 3
   useHP: 0
@@ -434,3 +384,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa61390f8f142354390f546848dd6fd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!68 &4758792596614869352
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8073587401290305573}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: 2.0479562, y: 2.5904667}
+  - {x: 1.9234695, y: 0.8534453}
+  - {x: 1.8781161, y: -0.07506658}
+  - {x: 0.9892708, y: -0.10939449}
+  - {x: 0.77373624, y: 0.9331093}
+  - {x: 0.94184875, y: 2.6388073}
+  - {x: 1.6699207, y: 2.912359}
+  - {x: 2.0457988, y: 2.5915651}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0

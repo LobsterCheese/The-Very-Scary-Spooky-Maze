@@ -6,11 +6,10 @@ using TMPro;
 
 public class playerBehavior : MonoBehaviour
 {
-
     [Header("Player Variables")]
     public float playerSpeed = 2f;
-    private int marker;
-    private int maxMarkers;
+    //private int marker;
+    //private int maxMarkers;
 
     [Header("Reference Objects")]
     public GameObject jumpscareCanvas;
@@ -20,7 +19,7 @@ public class playerBehavior : MonoBehaviour
     public RuntimeAnimatorController walking;
     public GameObject dialogueBox;
     public Camera cam;
-    public GameObject checkpoint1;
+    //public GameObject checkpoint1;
     public GameObject PlayerUI;
     public TextMeshProUGUI playerMarkersText;
     public TextMeshProUGUI maxMarkersText;
@@ -31,7 +30,7 @@ public class playerBehavior : MonoBehaviour
     //private Rigidbody2D rb;
     private bool canPlaceMarker;
     private bool canPlaceMarkerSafe;
-    private GameObject closestMarker;
+    //private GameObject closestMarker;
 
     //for managing step sounds
     [SerializeField]
@@ -48,12 +47,6 @@ public class playerBehavior : MonoBehaviour
 
     private void Awake()
     {
-        if (playerUpgrades.instance.checkpoint)
-        {
-            transform.position = checkpoint1.transform.position;
-        }
-
-        marker = playerUpgrades.instance.markerAmount;
 
     }
 
@@ -67,6 +60,13 @@ public class playerBehavior : MonoBehaviour
         camSize = cam.orthographicSize;
 
         canPlaceMarker = true;
+
+        //teleports player to checkpoint if they have made it to one
+        if (checkpointManager.instance.madeIt)
+        {
+            transform.position = checkpointManager.instance.checkpointPosition;
+        }
+
     }
 
     // Update is called once per frame
@@ -94,7 +94,6 @@ public class playerBehavior : MonoBehaviour
         */
 
         //Debug.Log(((transform.position - lastLocation).magnitude > stepDistance));
-
         
         //checks to make sure player is moving to play walking sound AFTER they have pressed any buttons
         if ((transform.position - lastLocation).magnitude > stepDistance && moved)
@@ -223,13 +222,14 @@ public class playerBehavior : MonoBehaviour
         {
             canPlaceMarker = false;
         }
+       
         
-
         //if you reach the safe zone, set the checkpoint flag to true, player respawns from here after this
         if (collision.gameObject.CompareTag("Safe"))
         {
-            playerUpgrades.instance.checkpoint = true;
+            playerUpgrades.instance.firstCheck = true;
         }
+        
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

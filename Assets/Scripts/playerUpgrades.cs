@@ -15,7 +15,9 @@ public class playerUpgrades : MonoBehaviour
     //how many markers the player has on hand
     public int currentMarkers;
 
-    public bool checkpoint;
+    public GameObject[] checkpoints;
+    public int currentCheck;
+    public bool firstCheck;
 
     private void Awake()
     {
