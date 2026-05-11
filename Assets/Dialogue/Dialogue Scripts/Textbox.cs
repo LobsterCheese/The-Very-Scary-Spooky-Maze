@@ -14,6 +14,7 @@ public class Textbox : MonoBehaviour
     [SerializeField]
     private float typeSpeed = 0.05f;
 
+    //HAS NOT BEEN IMPLEMENTED
     [Header("section for if NPC has multiple sets of dialogue")]
     [SerializeField]
     private bool multipleDialogues;
