@@ -37,5 +37,4 @@ public class upgradeConsumable : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
 }
