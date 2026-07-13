@@ -1,0 +1,269 @@
+fileFormatVersion: 2
+guid: aaa3fbda23f971a4e8712345650cb937
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -345786152276538146
+    second: a game by_0
+  - first:
+      213: -1195728589417384766
+    second: a game by_1
+  - first:
+      213: 2430127653993230025
+    second: a game by_2
+  - first:
+      213: -6332465383118297977
+    second: a game by_3
+  - first:
+      213: 3637887796805933356
+    second: a game by_4
+  - first:
+      213: -6670829238722299309
+    second: a game by_5
+  - first:
+      213: 1642447365348553897
+    second: a game by_6
+  - first:
+      213: 5461917986601024162
+    second: a game by_7
+  - first:
+      213: 5526088784041837928
+    second: a game by_8
+  - first:
+      213: 8115016196015559924
+    second: a game by_9
+  - first:
+      213: -7319419289227886332
+    second: a game by_10
+  - first:
+      213: -8842495103996591204
+    second: a game by_11
+  - first:
+      213: 7558164136323384743
+    second: a game by_12
+  - first:
+      213: 5746553374240602210
+    second: a game by_13
+  - first:
+      213: 8757606447596967181
+    second: a game by_14
+  - first:
+      213: 2173220999830268322
+    second: a game by_15
+  - first:
+      213: -6189884582186641550
+    second: a game by_16
+  - first:
+      213: 3647413121659825967
+    second: a game by_17
+  - first:
+      213: 4183216379375495035
+    second: a game by_18
+  - first:
+      213: -194938643270534611
+    second: a game by_19
+  - first:
+      213: 6564187946981589874
+    second: a game by_20
+  - first:
+      213: 8960991184552970975
+    second: a game by_21
+  - first:
+      213: -7405961325203729560
+    second: a game by_22
+  - first:
+      213: 3750083960511217739
+    second: a game by_23
+  - first:
+      213: -3387230977013903839
+    second: a game by_24
+  - first:
+      213: 1955303656720747141
+    second: a game by_25
+  - first:
+      213: -4763934451318377208
+    second: a game by_26
+  - first:
+      213: -5344411159276996578
+    second: a game by_27
+  - first:
+      213: -3804137186664740915
+    second: a game by_28
+  - first:
+      213: 8346615540674173165
+    second: a game by_29
+  - first:
+      213: 6388896282134843424
+    second: a game by_30
+  - first:
+      213: 154577921296516820
+    second: a game by_31
+  - first:
+      213: 6685756242351994529
+    second: a game by_32
+  - first:
+      213: -1121280272905015099
+    second: a game by_33
+  - first:
+      213: 6733702830437806356
+    second: a game by_34
+  - first:
+      213: -2733466308314957264
+    second: a game by_35
+  - first:
+      213: 2428370841997766131
+    second: a game by_36
+  - first:
+      213: -2528111160838301958
+    second: a game by_37
+  - first:
+      213: -2575619913562838785
+    second: a game by_38
+  - first:
+      213: -5064844289713162521
+    second: a game by_39
+  - first:
+      213: -1416466807830260715
+    second: a game by_40
+  - first:
+      213: -4626125168414024865
+    second: a game by_41
+  - first:
+      213: 1939335880659998555
+    second: a game by_42
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: a game by_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1200
+        height: 630
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edcce499355833bf0800000000000000
+      internalID: -345786152276538146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 6993c8f8d180cfc4ba32c232dc6fbb63
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      a game by_0: -345786152276538146
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

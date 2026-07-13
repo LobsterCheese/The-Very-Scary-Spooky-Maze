@@ -1,0 +1,260 @@
+fileFormatVersion: 2
+guid: ed6def2ed643b5147889224a8324f227
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1311841320868028167
+    second: brough to you by_0
+  - first:
+      213: 5699900737000319915
+    second: brough to you by_1
+  - first:
+      213: -6121557502218551870
+    second: brough to you by_2
+  - first:
+      213: -5930984251521389139
+    second: brough to you by_3
+  - first:
+      213: 3665911679609041566
+    second: brough to you by_4
+  - first:
+      213: -2348353614213052825
+    second: brough to you by_5
+  - first:
+      213: 4461188149845102829
+    second: brough to you by_6
+  - first:
+      213: 6808042617195197496
+    second: brough to you by_7
+  - first:
+      213: -113029783787801828
+    second: brough to you by_8
+  - first:
+      213: 2377202176591180872
+    second: brough to you by_9
+  - first:
+      213: -5155656223735057658
+    second: brough to you by_10
+  - first:
+      213: -5871480044932047489
+    second: brough to you by_11
+  - first:
+      213: 7515497221834901992
+    second: brough to you by_12
+  - first:
+      213: 3493420660470734092
+    second: brough to you by_13
+  - first:
+      213: 5175827726219959015
+    second: brough to you by_14
+  - first:
+      213: -195657624222752087
+    second: brough to you by_15
+  - first:
+      213: -3927553172955676181
+    second: brough to you by_16
+  - first:
+      213: -4165747376857943087
+    second: brough to you by_17
+  - first:
+      213: 1277558553049293252
+    second: brough to you by_18
+  - first:
+      213: 1760807808083470898
+    second: brough to you by_19
+  - first:
+      213: -8128198454914110507
+    second: brough to you by_20
+  - first:
+      213: -5877675976790891152
+    second: brough to you by_21
+  - first:
+      213: -1442959920128458216
+    second: brough to you by_22
+  - first:
+      213: 2167077639497112073
+    second: brough to you by_23
+  - first:
+      213: -7556526998708219453
+    second: brough to you by_24
+  - first:
+      213: 2272447166658969500
+    second: brough to you by_25
+  - first:
+      213: 482722932040267264
+    second: brough to you by_26
+  - first:
+      213: 8353992685197999924
+    second: brough to you by_27
+  - first:
+      213: -363642779338722413
+    second: brough to you by_28
+  - first:
+      213: 651757233117825557
+    second: brough to you by_29
+  - first:
+      213: -5483440202429562813
+    second: brough to you by_30
+  - first:
+      213: -5277869492813556214
+    second: brough to you by_31
+  - first:
+      213: 8617835199726398445
+    second: brough to you by_32
+  - first:
+      213: -5471074794464871443
+    second: brough to you by_33
+  - first:
+      213: 6511263716664504709
+    second: brough to you by_34
+  - first:
+      213: -6229933746566166365
+    second: brough to you by_35
+  - first:
+      213: 7707077148311352366
+    second: brough to you by_36
+  - first:
+      213: 5389154178724038143
+    second: brough to you by_37
+  - first:
+      213: 5255606260751435698
+    second: brough to you by_38
+  - first:
+      213: 7614236952578003413
+    second: brough to you by_39
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: brough to you by_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1200
+        height: 630
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70f940c1bb8943210800000000000000
+      internalID: 1311841320868028167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 338a8cc4929592744b71cdf067fb9729
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      brough to you by_0: 1311841320868028167
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

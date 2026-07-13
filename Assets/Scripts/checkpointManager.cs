@@ -7,7 +7,11 @@ public class checkpointManager : MonoBehaviour
     public int currentCheckpoint;
     public bool madeIt;
 
+    public bool startingFromScreen;
+
     public Vector3 checkpointPosition;
+
+    public bool[] checkpointUpgrades;
 
     private void Awake()
     {

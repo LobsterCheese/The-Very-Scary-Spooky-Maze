@@ -266,15 +266,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentSpeed: 0
-  textbox: {fileID: 0}
-  jumpscareCanvas: {fileID: 0}
+  deathAnim: {fileID: 0}
+  deathAnimClip: {fileID: 0}
+  dying: 0
   minDist: 1
   maxDist: 40
+  happyStatic: {fileID: 0}
   mobSpeed: 2.25
-  mobSlowedSpeed: 0.75
+  mobSlowedSpeed: 0.4
   HP: 3
   useHP: 0
   skeleton: 0
+  happy: 1
 --- !u!82 &4560711466751884404
 AudioSource:
   m_ObjectHideFlags: 0

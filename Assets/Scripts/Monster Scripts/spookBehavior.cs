@@ -1,22 +1,35 @@
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(Animator))]
 
 public class spookBehavior : MonoBehaviour
 {
     public float currentSpeed;
+    /*
     [SerializeField]
     private GameObject textbox;
     [SerializeField]
     private GameObject jumpscareCanvas;
+    */
 
+    //this is pretty much all just for spooks
+    private Animator anim;
+    [SerializeField]
+    private RuntimeAnimatorController deathAnim;
+    [SerializeField]
+    private AnimationClip deathAnimClip;
+    public bool dying;
 
     private AudioSource source;
     [SerializeField]
     private float minDist;
     [SerializeField]
     private float maxDist;
+
+    [SerializeField]
+    private GameObject happyStatic;
 
     [Header("Base Stats")]
     public float mobSpeed = 2f;
@@ -30,16 +43,24 @@ public class spookBehavior : MonoBehaviour
     [Header("Toggle this on if skeleton")]
     public bool skeleton;
 
+    [Header("Toggle this on if Happy Henry")]
+    [SerializeField]
+    private bool happy;
+    //default should be 0f;
+    [SerializeField]
+    private float happyFaster;
+
     private GameObject target;
-    private SpriteRenderer sprender;
+    //private SpriteRenderer sprender;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        anim = GetComponent<Animator>();
         target = GameObject.Find("Guy");
         source = GetComponent<AudioSource>();
         source.volume = 0;
-        sprender = GetComponent<SpriteRenderer>();
+        //sprender = GetComponent<SpriteRenderer>();
         currentSpeed = mobSpeed;
     }
 
@@ -47,12 +68,26 @@ public class spookBehavior : MonoBehaviour
     void Update()
     {
         //only moves mob towards player if textbox, death screen, or jumpscare is not active
-        transform.position = Vector3.MoveTowards(transform.position, target.transform.position, currentSpeed * Time.deltaTime * playerUpgrades.instance.dontMove);
-
-        if (HP <= 0)
+        if (!happy && !dying)
         {
+            transform.position = Vector3.MoveTowards(transform.position, target.transform.position, currentSpeed * Time.deltaTime * playerUpgrades.instance.dontMove);
+        }
+        else if (happy)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, target.transform.position, (currentSpeed + happyFaster) * Time.deltaTime * playerUpgrades.instance.dontMove);
+        }
+
+        if (happy)
+        {
+            //happyFaster += 0.1f * Time.deltaTime;
+        }
+
+        if (HP <= 0 && !dying)
+        {
+            dying = true;
             SFXManager.instance.PlaySoundRandom(SFXManager.instance.spookDie);
-            Destroy(gameObject);
+            anim.runtimeAnimatorController = deathAnim;
+            Destroy(gameObject, deathAnimClip.length);
         }
 
         //faces enemy towards player depending on position as long as they aren't a skeleton
@@ -75,40 +110,62 @@ public class spookBehavior : MonoBehaviour
             float dist = Vector3.Distance(transform.position, target.transform.position);
 
             //if the death screen is active, sound will be 0
-            if (jumpscareCanvas.activeInHierarchy || textbox.activeInHierarchy)
+            if (playerUpgrades.instance.dontMove == 0f)
             {
                 source.volume = 0;
             }
+            //if monster is directly on top of player
             else if (dist < minDist)
             {
+                if (happy)
+                {
+                    Debug.Log("on top");
+
+                    if (!happyStatic.activeInHierarchy)
+                    {
+                        happyStatic.SetActive(true);
+                    }
+
+                    Color temp = Color.white;
+                    temp.a = 0.3f;
+                    happyStatic.GetComponent<Image>().color = temp;
+
+                }
+
                 source.volume = 0.5f;
             }
+            //if monster is further away than the max, dont do anything
             else if (dist > maxDist)
             {
+                if (happy)
+                {
+                    if (happyStatic.activeInHierarchy)
+                    {
+                        Debug.Log("off");
+                        happyStatic.SetActive(false);
+                    }
+                }
                 source.volume = 0;
             }
+            //if monster is approaching player
             else
             {
-                source.volume = 0.5f - ((dist - minDist) / (maxDist - minDist));
-            }
-        }
-    }
+                if (happy)
+                {
 
-    //special check for skeletons, so they only flip their sprite when you can't see them
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("Flashlight") || collision.gameObject.CompareTag("Marker"))
-        {
-            if (skeleton)
-            {
-                if (target.transform.position.x < transform.position.x)
-                {
-                    sprender.flipX = false;
+                    if (!happyStatic.activeInHierarchy)
+                    {
+                        Debug.Log("approaching");
+                        happyStatic.SetActive(true);
+                    }
+
+                    Color temp = Color.white;
+                    temp.a = 0.3f - ((dist - minDist) / (maxDist - minDist));
+                    happyStatic.GetComponent<Image>().color = temp;
+
                 }
-                else
-                {
-                    sprender.flipX = true;
-                }
+
+                source.volume = 0.5f - ((dist - minDist) / (maxDist - minDist));
             }
         }
     }
@@ -118,6 +175,8 @@ public class spookBehavior : MonoBehaviour
         //when mob gets into the flashlight beam, if they have hp, they will take damage
         if(other.gameObject.tag == "Flashlight")
         {
+            //happyFaster = 0.2f;
+
             currentSpeed = mobSlowedSpeed;
             if (useHP)
             {
@@ -135,7 +194,7 @@ public class spookBehavior : MonoBehaviour
             }
         }
 
-        if (other.gameObject.tag == "Freeze")
+        if (other.gameObject.tag == "Freeze" || other.gameObject.tag == "Safe")
         {
             currentSpeed = 0;
         }

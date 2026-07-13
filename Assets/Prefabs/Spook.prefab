@@ -169,10 +169,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentSpeed: 0
   textbox: {fileID: 0}
-  deathCanvas: {fileID: 0}
   jumpscareCanvas: {fileID: 0}
+  deathAnim: {fileID: 9100000, guid: 05e0063255073bf4f99e5185d946b130, type: 2}
+  deathAnimClip: {fileID: 7400000, guid: cb05aa6fa41af76429d0d4154d487512, type: 2}
+  dying: 0
   minDist: 1
-  maxDist: 20
+  maxDist: 30
   mobSpeed: 2
   mobSlowedSpeed: 0.75
   HP: 3

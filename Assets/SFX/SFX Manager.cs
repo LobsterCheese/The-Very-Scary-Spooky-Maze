@@ -14,6 +14,9 @@ public class SFXManager : MonoBehaviour
     public AudioClip[] flashlight;
     public AudioClip[] upgrade;
     public AudioClip[] marker;
+    public AudioClip[] pause;
+    public AudioClip[] bellClick;
+    public AudioClip[] win;
 
     AudioSource source;
 

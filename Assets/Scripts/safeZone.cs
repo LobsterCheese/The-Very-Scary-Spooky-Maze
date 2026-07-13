@@ -27,10 +27,12 @@ public class safeZone : MonoBehaviour
             checkpointManager.instance.checkpointPosition = transform.position;
         }
 
+        /*
         if(collision.gameObject.CompareTag("Spook") || collision.gameObject.CompareTag("Skelly"))
         {
             Destroy(collision.gameObject);
         }
+        */
     }
 
 }

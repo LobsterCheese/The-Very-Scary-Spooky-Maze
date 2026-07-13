@@ -14,5 +14,5 @@ public class NPCDialogue : ScriptableObject
 
     [TextArea(1, 100)]
     public string[] dialogueList;
-
+    public AudioClip sound;
 }

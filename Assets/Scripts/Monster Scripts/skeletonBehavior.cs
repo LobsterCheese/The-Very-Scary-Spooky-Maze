@@ -2,17 +2,19 @@ using UnityEngine;
 
 public class skeletonBehavior : MonoBehaviour
 {
-
-    public Sprite[] skellyStills;
+    [SerializeField]
+    Sprite[] skellyStills;
 
     private Rigidbody2D rb;
 
-    private bool freeze;
+    public bool freeze;
 
+    /*
     [SerializeField]
     private GameObject dialogueBox;
     [SerializeField]
     private GameObject jumpscareCanvas;
+    */
 
     private SpriteRenderer sprender;
     private int randPose;
@@ -42,14 +44,6 @@ public class skeletonBehavior : MonoBehaviour
             sprender.sprite = skellyStills[randPose];
         }
 
-        //plays skeleton sound if player spots it
-        if (collision.gameObject.CompareTag("Flashlight") || collision.gameObject.CompareTag("Marker"))
-        {
-            if (!dialogueBox.activeInHierarchy || !jumpscareCanvas.activeInHierarchy)
-            {
-                SFXManager.instance.PlaySoundRandom(SFXManager.instance.skelly);
-            }
-        }
     }
 
     //freezes while it's in flashlight

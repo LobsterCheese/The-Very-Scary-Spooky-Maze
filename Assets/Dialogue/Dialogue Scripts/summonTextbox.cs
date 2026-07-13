@@ -1,9 +1,11 @@
+using Unity.VisualScripting;
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class summonTextbox : MonoBehaviour
 {
-
-    public GameObject textBox;
+    [SerializeField]
+    private GameObject textBox;
     public NPCDialogue dialogue;
 
     private bool canTalk;

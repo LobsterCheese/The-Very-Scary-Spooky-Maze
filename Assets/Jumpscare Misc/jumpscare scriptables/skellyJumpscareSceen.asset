@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: skellyJumpscareSceen
   m_EditorClassIdentifier: 
   monsterName: '"SKELLY"'
-  description: Creepy fellows who enjoy a good scare. Use your flashlight to stop
-    them in their tracks. Be warned, they like to travel in groups.
-  jumpscareSFX: {fileID: 0}
+  description: Creepy fellas that always bring a travel buddy. Use your flashlight
+    to stop them in their tracks!
   animController: {fileID: 9100000, guid: 8ecac6231a4732041a3f9785db46b7e2, type: 2}
   monsterImg: {fileID: -3206937854239196484, guid: 61668f7c47866ca47bc6c508b8da7f6a, type: 3}

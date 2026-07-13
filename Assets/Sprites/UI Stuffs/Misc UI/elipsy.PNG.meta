@@ -1,0 +1,284 @@
+fileFormatVersion: 2
+guid: 24e8a3683ded27e4e9f56c95c4025a2b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2979504615066145239
+    second: elipsy_0
+  - first:
+      213: -3075635591766927188
+    second: elipsy_1
+  - first:
+      213: -3952524789895293398
+    second: elipsy_2
+  - first:
+      213: -2968901485784102777
+    second: elipsy_3
+  - first:
+      213: -3634203495553237378
+    second: elipsy_4
+  - first:
+      213: -4445428338422833843
+    second: elipsy_5
+  - first:
+      213: -7287913430882068668
+    second: elipsy_6
+  - first:
+      213: -7732753848796004085
+    second: elipsy_7
+  - first:
+      213: 3883123541996306178
+    second: elipsy_8
+  - first:
+      213: -6363474254290001977
+    second: elipsy_9
+  - first:
+      213: -7503464678743786791
+    second: elipsy_10
+  - first:
+      213: -7594653266658874208
+    second: elipsy_11
+  - first:
+      213: -4458251022679789088
+    second: elipsy_12
+  - first:
+      213: -4920399987606532927
+    second: elipsy_13
+  - first:
+      213: 1054014419096592599
+    second: elipsy_14
+  - first:
+      213: -9152007075075217131
+    second: elipsy_15
+  - first:
+      213: -4238935095846523922
+    second: elipsy_16
+  - first:
+      213: 7759789579637434865
+    second: elipsy_17
+  - first:
+      213: -6054897083347140888
+    second: elipsy_18
+  - first:
+      213: -5488743161994437225
+    second: elipsy_19
+  - first:
+      213: 6610730271724509804
+    second: elipsy_20
+  - first:
+      213: -7557473415521030211
+    second: elipsy_21
+  - first:
+      213: -6798837053661284308
+    second: elipsy_22
+  - first:
+      213: 3519272118719905374
+    second: elipsy_23
+  - first:
+      213: -1026840445863184409
+    second: elipsy_24
+  - first:
+      213: -1228460148212673162
+    second: elipsy_25
+  - first:
+      213: -1758074023283502469
+    second: elipsy_26
+  - first:
+      213: 3582755175005574012
+    second: elipsy_27
+  - first:
+      213: 1834584423433396036
+    second: elipsy_28
+  - first:
+      213: 8481524042839182848
+    second: elipsy_29
+  - first:
+      213: 4797226173385507663
+    second: elipsy_30
+  - first:
+      213: 1211723143165592323
+    second: elipsy_31
+  - first:
+      213: -2287505983820477796
+    second: elipsy_32
+  - first:
+      213: -6728875660090157864
+    second: elipsy_33
+  - first:
+      213: -2408408399762799009
+    second: elipsy_34
+  - first:
+      213: -9162541553188997157
+    second: elipsy_35
+  - first:
+      213: -5345591265837721507
+    second: elipsy_36
+  - first:
+      213: 8470776302249493112
+    second: elipsy_37
+  - first:
+      213: 2902534582576014790
+    second: elipsy_38
+  - first:
+      213: -9028852779347910349
+    second: elipsy_39
+  - first:
+      213: 3603395360012919626
+    second: elipsy_40
+  - first:
+      213: 320721392176335893
+    second: elipsy_41
+  - first:
+      213: 1790212603051481796
+    second: elipsy_42
+  - first:
+      213: -4844118457478524143
+    second: elipsy_43
+  - first:
+      213: -134337359403465607
+    second: elipsy_44
+  - first:
+      213: 4843812370467325406
+    second: elipsy_45
+  - first:
+      213: 5784006074169394862
+    second: elipsy_46
+  - first:
+      213: 5306743443518761206
+    second: elipsy_47
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: elipsy_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1200
+        height: 630
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d197ab49a3595920800000000000000
+      internalID: 2979504615066145239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: b6e5d860ec042f04ba40fb7f785dc67d
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      elipsy_0: 2979504615066145239
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

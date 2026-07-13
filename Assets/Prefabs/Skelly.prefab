@@ -14,8 +14,9 @@ GameObject:
   - component: {fileID: 3825441774522394373}
   - component: {fileID: 5991463872702779946}
   - component: {fileID: 3738524460892614973}
-  - component: {fileID: 7810783279478824407}
   - component: {fileID: 5739511368682274648}
+  - component: {fileID: 6856147645556379809}
+  - component: {fileID: 8943355311551103700}
   m_Layer: 0
   m_Name: Skelly
   m_TagString: Skelly
@@ -173,6 +174,7 @@ MonoBehaviour:
   - {fileID: -4123330673932220930, guid: 772bde345ed3ea8408fb6881a7622563, type: 3}
   - {fileID: 5541477298391086495, guid: eddacc6ac7551df42825faa05979a155, type: 3}
   - {fileID: 5706109452800021069, guid: 652fe88907f6d114ea33cc41416ce76b, type: 3}
+  freeze: 0
 --- !u!95 &3738524460892614973
 Animator:
   serializedVersion: 7
@@ -195,28 +197,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &7810783279478824407
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3238440896678972214}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1710a18ca8d48249b5159f63ca5dc7b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentSpeed: 0
-  textbox: {fileID: 0}
-  deathScreen: {fileID: 0}
-  minDist: 0
-  maxDist: 0
-  mobSpeed: 3.5
-  mobSlowedSpeed: 0
-  HP: 3
-  useHP: 0
-  skeleton: 1
 --- !u!82 &5739511368682274648
 AudioSource:
   m_ObjectHideFlags: 0
@@ -229,7 +209,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -314,3 +294,50 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &6856147645556379809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3238440896678972214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81fbbe224bffca84b93283a382759737, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  skellySounds:
+  - {fileID: 8300000, guid: 648712ec7e6806345be5c46a17bbd1ea, type: 3}
+  - {fileID: 8300000, guid: 4482d935566803349b7b12d46de22d7d, type: 3}
+  - {fileID: 8300000, guid: 41dd51915aa85c4479cc3979712df968, type: 3}
+  - {fileID: 8300000, guid: d6ee72384398ab546a4168ac0049a8eb, type: 3}
+  - {fileID: 8300000, guid: c3265fabb964ca54aa1cd8875faff579, type: 3}
+  - {fileID: 8300000, guid: 467a0b8728b71c24db6bcd8bc0cd7a80, type: 3}
+  - {fileID: 8300000, guid: 7cc0c2d3d5fd77e438e809cd64a431e6, type: 3}
+  - {fileID: 8300000, guid: 48ae99de1d98fa149bff496e99e7a15c, type: 3}
+  minDist: 1
+  maxDist: 20
+  moveMult: 0
+--- !u!195 &8943355311551103700
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3238440896678972214}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.7
+  m_Speed: 4
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2.5
+  m_BaseOffset: 1.32
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
